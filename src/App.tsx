@@ -1,14 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './Nav-Bar'
-import AppBar from './Nav-Bar';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import "./Nav-Bar";
+import AppBar from "./Nav-Bar";
+import SommaireComponent from "./summary";
 
-function App() {
+const App: React.FC = () => {
+  const [expanded, setExpanded] = React.useState<boolean>(false);
+
+  const handleToggle = () => {
+    setExpanded((prev) => !prev);
+  };
   return (
-    <div className="App">
+    <div className="App" style={{"width": "100%"}}>
       <header className="App-header">
-        <AppBar />
+        <AppBar expanded={expanded} onToggle={handleToggle} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -22,8 +28,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <SommaireComponent expanded={expanded} />
     </div>
   );
-}
+};
 
 export default App;
