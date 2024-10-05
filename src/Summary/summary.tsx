@@ -6,9 +6,9 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-import top100Films from "./contentlist";
+import './summary.css'; 
+import contentList from "../contentlist";
 
 interface SommaireProps {
   expanded: boolean;
@@ -16,7 +16,7 @@ interface SommaireProps {
 
 const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
 
-    const sortedContent = top100Films
+    const sortedContent = contentList
     .map((film) => {
       const firstLetter = film.label[0].toUpperCase();
       return {
@@ -33,17 +33,18 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
         }
         acc[group].push(film);
         return acc;
-      }, {} as { [key: string]: typeof top100Films });
+      }, {} as { [key: string]: typeof contentList });
 
   return (
-    <Accordion expanded={expanded} 
+    <Accordion expanded={expanded} className="sommaire-container"
     style={{
         position: "fixed",       // fixe la position du sommaire
         top: 0,                  // aligné en haut de la page
-        left: expanded ? 0 : "-17%",  // 300px en dehors de l'écran lorsqu'il est fermé
+        left: expanded ? 0 : "-20%",  // 300px en dehors de l'écran lorsqu'il est fermé
         width: "17%",          // largeur du sommaire
         height: "100%",          // prend toute la hauteur
-        backgroundColor: "white", // couleur de fond
+        backgroundColor: "#252525",
+        color: "#ffffff",
         zIndex: 1000,            // au-dessus du contenu principal
         boxShadow: "2px 0px 5px rgba(0,0,0,0.5)", // ajoute une ombre
         transition: "left 0.3s ease",  // transition fluide pour glisser

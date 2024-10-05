@@ -1,9 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
+import logo from "../logo.svg";
 import "./App.css";
-import "./Nav-Bar";
-import AppBar from "./Nav-Bar";
-import SommaireComponent from "./summary";
+import AppBar from "../Nav-Bar/Nav-Bar";
+import SommaireComponent from "../Summary/summary";
 
 const App: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean>(false);

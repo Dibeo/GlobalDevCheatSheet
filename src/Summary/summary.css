@@ -1,0 +1,76 @@
+/* SommaireComponent.css */
+
+.sommaire-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #ffffff; /* Couleur du texte claire */
+    z-index: 1000;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .sommaire-accordion {
+    background-color: #1e1e1e; /* Fond sombre pour l'accordéon */
+    color: #ffffff; /* Couleur du texte claire pour l'accordéon */
+  }
+  
+  .sommaire-accordion-summary {
+    color: #ffffff; /* Couleur claire pour le résumé */
+  }
+  
+  .sommaire-accordion-details {
+    padding: 0; /* Enlève le padding par défaut */
+  }
+  
+  .group-title {
+    color: #bbb; /* Couleur secondaire pour les titres de groupe */
+    margin-top: 10px;
+  }
+  
+  .film-item {
+    color: #ffffff; /* Couleur claire pour les éléments de film */
+    list-style-type: none; /* Enlève les puces des éléments de liste */
+    padding-left: 20px; /* Indentation pour les éléments de la liste */
+  }
+  /* SommaireComponent.css */
+
+/* Styles globaux pour la scrollbar */
+.sommaire-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #121212; /* Couleur de fond sombre */
+    color: #ffffff; /* Couleur du texte claire */
+    z-index: 1000;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    overflow-y: auto; /* Permet le défilement vertical */
+    padding: 16px;
+  }
+  
+  /* Styles pour la barre de défilement */
+  .sommaire-container::-webkit-scrollbar {
+    width: 10px; /* Largeur de la scrollbar */
+  }
+  
+  .sommaire-container::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Couleur de fond de la track */
+  }
+  
+  .sommaire-container::-webkit-scrollbar-thumb {
+    background: #3b3b3b; /* Couleur du thumb (partie déplaçable) */
+    border-radius: 10px; /* Arrondir les bords du thumb */
+  }
+  
+  .sommaire-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur du thumb au survol */
+  }
+  

@@ -8,8 +8,9 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import Autocomplete from "./Autocomplete";
-import Sommaire from "./summary";
+
+import Autocomplete from "../Autocomplete";
+import "./Nav-Bar.css"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
