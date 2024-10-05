@@ -1,3 +1,4 @@
+/*  summary.tsx   */
 import React from "react";
 import {
   Accordion,
@@ -39,24 +40,21 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
     <Accordion expanded={expanded} className="sommaire-container"
     style={{
         position: "fixed",       // fixe la position du sommaire
-        top: 0,                  // aligné en haut de la page
         left: expanded ? 0 : "-20%",  // 300px en dehors de l'écran lorsqu'il est fermé
         width: "17%",          // largeur du sommaire
         height: "100%",          // prend toute la hauteur
         backgroundColor: "#252525",
-        color: "#ffffff",
-        zIndex: 1000,            // au-dessus du contenu principal
+        color: "#ffffff", //couleur du texte
         boxShadow: "2px 0px 5px rgba(0,0,0,0.5)", // ajoute une ombre
         transition: "left 0.3s ease",  // transition fluide pour glisser
         overflowY: "auto",        // permet de faire défiler le contenu si nécessaire
       }}>
       <AccordionSummary>
-        <Typography variant="h5"    >Summary</Typography>
+        <Typography variant="h5" >Summary</Typography>
       </AccordionSummary>
       <AccordionDetails>
           {Object.keys(groupedContent).map((letter) => (
             <div key={letter}>
-              {/* Affiche la première lettre de chaque groupe */}
               <Typography variant="h6" style={{ marginTop: "10px" }}>
                 {letter}
               </Typography>

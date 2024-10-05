@@ -1,9 +1,8 @@
-/* Ajoutez cela dans votre fichier CSS si nécessaire */
+/*  Nav-Bar.css   */
 .icon-button {
-    transition: transform 0.3s ease; /* Animation de transformation */
-  }
-  
-  .icon-button:hover {
-    transform: scale(1.1); /* Agrandir légèrement au survol */
-  }
-  
+  transition: transform 0.3s ease; /* Animation de transformation */
+}
+
+.icon-button:hover {
+  transform: scale(1.1); /* Agrandir légèrement au survol */
+}

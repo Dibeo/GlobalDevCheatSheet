@@ -1,3 +1,4 @@
+/*  App.tsx   */
 import React from "react";
 import logo from "../logo.svg";
 import "./App.css";
@@ -14,7 +15,10 @@ const App: React.FC = () => {
     <div className="App" style={{"width": "100%"}}>
       <header className="App-header">
         <AppBar expanded={expanded} onToggle={handleToggle} />
-        <img src={logo} className="App-logo" alt="logo" />
+      </header>
+      <SommaireComponent expanded={expanded} />
+      <body className="App-content" >
+      <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -26,8 +30,7 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-      </header>
-      <SommaireComponent expanded={expanded} />
+      </body>
     </div>
   );
 };

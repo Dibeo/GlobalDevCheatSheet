@@ -1,3 +1,4 @@
+/*  Nav-Bar.tsx   */
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -7,10 +8,12 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+
 import SearchIcon from "@mui/icons-material/Search";
 
 import Autocomplete from "../Autocomplete";
-import "./Nav-Bar.css"
+import "./Nav-Bar.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -62,9 +65,10 @@ interface ToolbarProps {
 const ToolbarComponent: React.FC<ToolbarProps> = ({ expanded, onToggle }) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{"width": "100%"}}>
-        <Toolbar >
+      <AppBar position="relative" style={{ width: "100%" }}>
+        <Toolbar>
           <IconButton
+            className="icon-button" // Appliquer la classe CSS
             size="large"
             edge="start"
             color="inherit"
@@ -72,7 +76,7 @@ const ToolbarComponent: React.FC<ToolbarProps> = ({ expanded, onToggle }) => {
             sx={{ mr: 2 }}
             onClick={onToggle}
           >
-            <MenuIcon />
+            {expanded ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
           <Typography
             variant="h6"
@@ -84,7 +88,7 @@ const ToolbarComponent: React.FC<ToolbarProps> = ({ expanded, onToggle }) => {
           </Typography>
           <Search>
             <SearchIconWrapper>
-              <SearchIcon  />
+              <SearchIcon />
             </SearchIconWrapper>
             <Autocomplete />
           </Search>
