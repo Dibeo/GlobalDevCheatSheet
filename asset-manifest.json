@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/GlobalDevCheatSheet/static/css/main.38d3eb6a.css",
-    "main.js": "/GlobalDevCheatSheet/static/js/main.257febaa.js",
+    "main.css": "/GlobalDevCheatSheet/static/css/main.3a0704ef.css",
+    "main.js": "/GlobalDevCheatSheet/static/js/main.0b602645.js",
     "static/js/453.d2e5f61a.chunk.js": "/GlobalDevCheatSheet/static/js/453.d2e5f61a.chunk.js",
     "static/media/logo.svg": "/GlobalDevCheatSheet/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/GlobalDevCheatSheet/index.html",
-    "main.38d3eb6a.css.map": "/GlobalDevCheatSheet/static/css/main.38d3eb6a.css.map",
-    "main.257febaa.js.map": "/GlobalDevCheatSheet/static/js/main.257febaa.js.map",
+    "main.3a0704ef.css.map": "/GlobalDevCheatSheet/static/css/main.3a0704ef.css.map",
+    "main.0b602645.js.map": "/GlobalDevCheatSheet/static/js/main.0b602645.js.map",
     "453.d2e5f61a.chunk.js.map": "/GlobalDevCheatSheet/static/js/453.d2e5f61a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.38d3eb6a.css",
-    "static/js/main.257febaa.js"
+    "static/css/main.3a0704ef.css",
+    "static/js/main.0b602645.js"
   ]
 }
