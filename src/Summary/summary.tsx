@@ -4,8 +4,9 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
-  Button, // Importer Button pour la navigation
+  Button,
 } from "@mui/material";
+import { Link } from "react-router-dom"; // Importer Link
 import './summary.css'; 
 import contentList from "../contentlist";
 
@@ -14,7 +15,6 @@ interface SommaireProps {
 }
 
 const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
-
   // Trier le contenu par catégorie, puis par titre dans chaque catégorie
   const sortedContent = contentList.sort((a, b) => {
     const categoryComparison = a.categories.localeCompare(b.categories);
@@ -54,14 +54,16 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
             <Typography variant="h6" style={{ marginTop: "10px" }}>
               {category}
             </Typography>
-            <hr style={{ border: '1px solid #ccc', margin: '5px 0' }} /> {/* Ligne ajoutée ici */}
+            <hr style={{ border: '1px solid #ccc', margin: '5px 0' }} />
             <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
               {groupedContent[category].map((content, index) => (
                 <li key={index}>
                   <Button
+                    component={Link} // Utilisez Link au lieu de Button
+                    to={content.link} // Chemin associé
                     style={{ textDecoration: 'none', color: 'inherit' }}
                   >
-                    {content.title}
+                    {content.title} {/* Affichage du titre */}
                   </Button>
                 </li>
               ))}
