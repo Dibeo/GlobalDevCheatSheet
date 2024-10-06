@@ -1,25 +1,13 @@
 /* summary.css */
-
-.sommaire-accordion {
-  background-color: #1e1e1e; /* Fond sombre pour l'accordéon */
-  color: #ffffff; /* Couleur du texte claire pour l'accordéon */
-}
-
-.sommaire-accordion-summary {
-  color: #ffffff; /* Couleur claire pour le résumé */
-}
-
 .sommaire-accordion-details {
   padding: 0; /* Enlève le padding par défaut */
 }
 
 .group-title {
-  color: #bbb; /* Couleur secondaire pour les titres de groupe */
   margin-top: 10px;
 }
 
 .film-item {
-  color: #ffffff; /* Couleur claire pour les éléments de film */
   list-style-type: none; /* Enlève les puces des éléments de liste */
   padding-left: 20px; /* Indentation pour les éléments de la liste */
 }
@@ -29,15 +17,33 @@
   width: 10px; /* Largeur de la scrollbar */
 }
 
+/* Thème clair (par défaut) */
 .sommaire-container::-webkit-scrollbar-track {
-  background: #1e1e1e; /* Couleur de fond de la track */
+  background: #f0f0f0; /* Couleur de fond de la track en mode clair */
 }
 
 .sommaire-container::-webkit-scrollbar-thumb {
-  background: #3b3b3b; /* Couleur du thumb (partie déplaçable) */
+  background: #ccc; /* Couleur du thumb en mode clair */
   border-radius: 10px; /* Arrondir les bords du thumb */
 }
 
 .sommaire-container::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Couleur du thumb au survol */
+  background: #aaa; /* Couleur du thumb au survol en mode clair */
 }
+
+/* Thème sombre */
+@media (prefers-color-scheme: dark) {
+  .sommaire-container::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Couleur de fond de la track en mode sombre */
+  }
+
+  .sommaire-container::-webkit-scrollbar-thumb {
+    background: #3b3b3b; /* Couleur du thumb en mode sombre */
+    border-radius: 10px; /* Arrondir les bords du thumb */
+  }
+
+  .sommaire-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur du thumb au survol en mode sombre */
+  }
+}
+

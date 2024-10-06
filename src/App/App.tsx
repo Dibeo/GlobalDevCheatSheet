@@ -4,6 +4,31 @@ import logo from "../logo.svg";
 import "./App.css";
 import AppBar from "../Nav-Bar/Nav-Bar";
 import SommaireComponent from "../Summary/summary";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import Content from "../Content/ContentBase";
+
+const theme = createTheme({
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: {
+          main: '#FF5733',
+        },
+        // ...other tokens
+      },
+    },
+    dark: {
+      palette: {
+        primary: {
+          main: '#E0C2FF',
+        },
+        // ...other tokens
+      },
+    },
+  },
+});
 
 const App: React.FC = () => {
   const [expanded, setExpanded] = React.useState<boolean>(false);
@@ -12,26 +37,23 @@ const App: React.FC = () => {
     setExpanded((prev) => !prev);
   };
   return (
-    <div className="App" style={{"width": "100%"}}>
-      <header className="App-header">
-        <AppBar expanded={expanded} onToggle={handleToggle} />
-      </header>
-      <SommaireComponent expanded={expanded} />
-      <body className="App-content" >
-      <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <div className="App" style={{ width: "100%" }}>
+        <header className="App-header">
+          <AppBar expanded={expanded} onToggle={handleToggle} />
+        </header>
+        <div
+          className="App-content"
+          style={{
+            marginLeft: expanded ? "17%" : "0", // Ajout de marge à gauche si expanded
+            transition: "margin-left 0.3s ease", // Transition fluide
+          }}
         >
-          Learn React
-        </a>
-      </body>
-    </div>
+          <SommaireComponent expanded={expanded} />
+          <Content />
+        </div>
+      </div>
+    </ThemeProvider>
   );
 };
 
