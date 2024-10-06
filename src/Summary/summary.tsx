@@ -4,11 +4,10 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
-  Button, // Importer Button pour la navigation
+  Button,
 } from "@mui/material";
 import './summary.css'; 
-
-import contentList from "../contentlist";
+import contentList from "../contentlist"; // Assurez-vous que ce chemin est correct
 
 interface SommaireProps {
   expanded: boolean;
@@ -35,6 +34,10 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
     return acc;
   }, {} as { [key: string]: typeof contentList });
 
+  const handleNavigation = (link: string) => {
+    window.location.href = link; // Rediriger vers le lien approprié
+  };
+
   return (
     <Accordion expanded={expanded} className="sommaire-container"
       style={{
@@ -47,7 +50,7 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
         overflowY: "auto",
       }}>
       <AccordionSummary>
-        <Typography variant="h5">Summary</Typography>
+        <Typography variant="h5">Sommaire</Typography>
       </AccordionSummary>
       <AccordionDetails>
         {Object.keys(groupedContent).sort().map((category) => (
@@ -55,12 +58,13 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
             <Typography variant="h6" style={{ marginTop: "10px" }}>
               {category}
             </Typography>
-            <hr style={{ border: '1px solid #ccc', margin: '5px 0' }} /> {/* Ligne ajoutée ici */}
+            <hr style={{ border: '1px solid #ccc', margin: '5px 0' }} />
             <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
               {groupedContent[category].map((content, index) => (
                 <li key={index}>
                   <Button
-                    style={{ textDecoration: 'none', color: 'inherit' }}
+                    onClick={() => handleNavigation(content.link)}
+                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', textAlign: 'left' }}
                   >
                     {content.title}
                   </Button>
