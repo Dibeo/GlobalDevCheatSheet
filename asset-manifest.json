@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GlobalDevCheatSheet/static/css/main.003d9813.css",
-    "main.js": "/GlobalDevCheatSheet/static/js/main.16943aab.js",
+    "main.js": "/GlobalDevCheatSheet/static/js/main.472055ea.js",
     "react-syntax-highlighter/refractor-core-import.js": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter/refractor-core-import.5bf20a64.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter_languages_refractor_abap.cfefadd6.chunk.js",
     "react-syntax-highlighter_languages_refractor_abnf.js": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter_languages_refractor_abnf.1fb537de.chunk.js",
@@ -285,7 +285,7 @@
     "static/media/background-light.jpg": "/GlobalDevCheatSheet/static/media/background-light.28265fdee2b324728c66.jpg",
     "index.html": "/GlobalDevCheatSheet/index.html",
     "main.003d9813.css.map": "/GlobalDevCheatSheet/static/css/main.003d9813.css.map",
-    "main.16943aab.js.map": "/GlobalDevCheatSheet/static/js/main.16943aab.js.map",
+    "main.472055ea.js.map": "/GlobalDevCheatSheet/static/js/main.472055ea.js.map",
     "refractor-core-import.5bf20a64.chunk.js.map": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter/refractor-core-import.5bf20a64.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.cfefadd6.chunk.js.map": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter_languages_refractor_abap.cfefadd6.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abnf.1fb537de.chunk.js.map": "/GlobalDevCheatSheet/static/js/react-syntax-highlighter_languages_refractor_abnf.1fb537de.chunk.js.map",
@@ -568,6 +568,6 @@
   },
   "entrypoints": [
     "static/css/main.003d9813.css",
-    "static/js/main.16943aab.js"
+    "static/js/main.472055ea.js"
   ]
 }
