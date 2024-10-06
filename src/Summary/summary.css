@@ -17,6 +17,10 @@
   width: 10px; /* Largeur de la scrollbar */
 }
 
+li > button{
+  width: 100%;
+}
+
 /* Thème clair (par défaut) */
 .sommaire-container::-webkit-scrollbar-track {
   background: #f0f0f0; /* Couleur de fond de la track en mode clair */
