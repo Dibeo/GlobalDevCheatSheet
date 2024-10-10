@@ -62,12 +62,7 @@ const SommaireComponent: React.FC<SommaireProps> = ({ expanded }) => {
             <ul style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
               {groupedContent[category].map((content, index) => (
                 <li key={index}>
-                  <Button
-                    onClick={() => handleNavigation(content.link)}
-                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', textAlign: 'left' }}
-                  >
-                    {content.title}
-                  </Button>
+                  <a href={content.link}>{content.title}</a>
                 </li>
               ))}
             </ul>
